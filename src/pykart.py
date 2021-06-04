@@ -38,7 +38,6 @@ class pykart:
                 raise Exception
         except:
             print("Network problem OR page loading Error re-try.")
-            self.new_pro()
         return "Page status :"+str(product_page.status_code)
     def bs4_soup(self,pg_html):
         #bs4 help to find and explore pg_html
