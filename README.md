@@ -36,6 +36,7 @@ if fop:
             print("end")
             break
     #product data in list
+    #the data you see from product_details only those products are present in list
     fop.pg_ls()
 ```
 
