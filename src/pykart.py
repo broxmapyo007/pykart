@@ -36,8 +36,8 @@ class pykart:
                 self.bs4_soup(pg_html)
             else:
                 raise Exception
-        except:
-            print("Network problem OR page loading Error re-try.")
+        except Exception as err:
+            print("Network problem OR page loading Error re-try."+str(err))
         return "Page status :"+str(product_page.status_code)
     def bs4_soup(self,pg_html):
         #bs4 help to find and explore pg_html
@@ -142,7 +142,7 @@ class pykart:
                 raise Exception
         except Exception as e:
             print("No request Product",e)
-    def pg_ls(self):
+    def pr_ls(self):
         return self.pg_ls
     def form_tb(self,data,fields):
         if data and fields:
